@@ -9,3 +9,7 @@ Is Flink SQL a database? No. Bring your own data
   - `+U`: Update After: Update an earlier result: 插入值= `-U`值 + delta in current update
   - `-D`: Delete an earlier result
   - `+I`: Insertion: always insert from select
+
+## Streaming mode
+- order by time (only): cannot order by other vars
+- provide special optimized join (with temporal table | with external lookup table) 
