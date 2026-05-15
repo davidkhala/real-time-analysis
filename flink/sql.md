@@ -13,3 +13,6 @@ Is Flink SQL a database? No. Bring your own data
 ## Streaming mode
 - order by time (only): cannot order by other vars
 - provide special optimized join (with temporal table | with external lookup table) 
+
+## Flink SQL Client CLI
+https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/table/sqlclient/
