@@ -1,6 +1,7 @@
 # watermark
 - Watermark are calculated from the largest event time that has been seen so far
 - Watermark 的本质是event time的进度指示器(像blockchain的lastest block，但是没有timeout机制，只看 count）
+  - 告诉 Flink watermark之前的数据已经到齐(finality), 可以安全地关闭窗口，触发时间相关计算
   - Event‑time windows cannot close until all partitions’ watermarks advance past the window boundary.
   - The operator’s global watermark = the minimum of all subtasks’ watermarks.
 - watermark = 当前已看到的最大事件时间（max event time）减去允许的延迟（lateness）
